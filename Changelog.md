@@ -1,7 +1,7 @@
 ## Version 2.1.0 (To Be Determined)
 ✅ Enhanced Security with "OSIC" (Obfuscation + Self-Integrity Check)
 ✅ Unique HUDs for several costumes (STILL BETA - WORK IN PROGRESS!)
-✅ new GUI Design
+✅ New GUI Design
 ✅ Added New Suit: Brand New Day
 ✅ Improved MCU Suits
 ✅ Improved Advanced Suits
