@@ -1,12 +1,13 @@
 ## Version 2.1.0 (To Be Determined)
 ✅ Enhanced Security with "OSIC" (Obfuscation + Self-Integrity Check)
 ✅ Unique HUDs for several costumes (STILL BETA - WORK IN PROGRESS!)
-✅ Brand new GUI Design
+✅ new GUI Design
 ✅ Added New Suit: Brand New Day
 ✅ Improved MCU Suits
 ✅ Improved Advanced Suits
 ✅ Improved Webbed PS1 Suits
 ✅ Improved Todd McFarlane Suit
+✅ Improved Symbiote Suits (Classic, Ultimate, Black, Anti)
 
 ## Version 2.0.9
 ✅ Improved Raimi Suits + Venom (2007) <br>
