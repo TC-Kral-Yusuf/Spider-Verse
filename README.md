@@ -21,7 +21,11 @@
 ✅ Customize Spider-Man with more than 375 costumes. <br>
 ✅ Customize In-Game Characters, Items and much more. <br>
 
-## 3️⃣ FLYCAST EMULATOR
+## 3️⃣ DOWNLOAD
+🔗 Download the latest version of Project: Spider-Verse:<br>
+https://github.com/TC-Kral-Yusuf/Spider-Verse/releases/latest
+
+## 4️⃣ FLYCAST EMULATOR
 > [!NOTE]
 > **You need the Flycast Emulator in order to play the game with these mods.** <br>
 > **All rights reserved to respective owners and developers of Flycast.** <br> <br>
