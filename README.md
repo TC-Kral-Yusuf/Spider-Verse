@@ -27,8 +27,8 @@ https://github.com/TC-Kral-Yusuf/Spider-Verse/releases/latest
 
 ## 4️⃣ FLYCAST EMULATOR
 > [!NOTE]
-> **You need the Flycast Emulator in order to play the game with these mods.** <br>
-> **All rights reserved to respective owners and developers of Flycast.** <br> <br>
+> You need the Flycast Emulator in order to play the game with these mods. <br>
+> All rights reserved to respective owners and developers of Flycast. <br> <br>
 Download Links: <br>
 **https://flyinghead.github.io/flycast-builds/** <br>
 **https://github.com/flyinghead/flycast**
