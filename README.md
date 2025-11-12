@@ -1,5 +1,5 @@
 # Project: Spider-Verse <br>
-<img src="https://www.retroplace.com/pics/dreamcast/packshots/54905--spider-man.png" width="350" height="350"> <br>
+<img src="https://cdn.mobygames.com/covers/4030908-spider-man-dreamcast-front-cover.jpg" width="416" height="400"> <br>
 
 > [!TIP]
 > **This project is getting updated daily, monthly or even annually.** <br>
