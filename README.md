@@ -6,7 +6,7 @@
 > **Please ensure, that your Mod Menu is always up-to-date.**
 
 > [!IMPORTANT]
-> **Project: Spider-Verse is only supported on <ins> Windows 10 or later.</ins>**
+> **Project: Spider-Verse is only supported on <ins>Windows 11.</ins>**
 
 ## 1️⃣ DISCLAIMER
 ❌ DO NOT upload or re-upload these files anywhere. <br>
