@@ -1,12 +1,11 @@
-## Version 2.1.0 (To Be Determined)
-✅ Enhanced Security with "OSIC" (Obfuscation + Self-Integrity Check)
-✅ Unique HUDs for several costumes (STILL BETA - WORK IN PROGRESS!)
-✅ New GUI Design
-✅ Added New Suit: Brand New Day
-✅ Improved MCU Suits
-✅ Improved Advanced Suits
-✅ Improved Webbed PS1 Suits
-✅ Improved Todd McFarlane Suit
+## Version 2.1.0
+✅ Unique HUDs for ALL costumes <br>
+✅ New GUI Design <br>
+✅ Added New Suit: Brand New Day <br>
+✅ Improved MCU Suits <br>
+✅ Improved Advanced Suits <br>
+✅ Improved Webbed PS1 Suits <br>
+✅ Improved Todd McFarlane Suit <br>
 ✅ Improved Symbiote Suits (Classic, Ultimate, Black, Anti)
 
 ## Version 2.0.9
