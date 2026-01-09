@@ -9,12 +9,9 @@
 > **Project: Spider-Verse is only supported on <ins>Windows 11.</ins>**
 
 ## 1️⃣ DISCLAIMER
-❌ DO NOT upload or re-upload these files anywhere. <br>
-❌ DO NOT use the textures for other skins. <br>
-❌ DO NOT download my projects or tools from unofficial sources. <br>
-❌ Credit must be given when posting previews/footages. <br>
-❌ All Projects are available ONLY on my official GitHub. <br>
-❌ No responsibility is taken for viruses from external downloads.
+ℹ️ Credit must be given when posting previews or footages. <br>
+ℹ️ All projects are provided under the GNU General Public License v3. <br>
+ℹ️ No responsibility is taken for viruses or other damages from using the software. <br>
 
 ## 2️⃣ FEATURES
 ✅ Brand new GUI-based Mod Menu. <br>
