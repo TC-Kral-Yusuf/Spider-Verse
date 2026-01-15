@@ -1,5 +1,5 @@
 # Project: Spider-Verse <br>
-<img src="https://cdn.mobygames.com/covers/4030908-spider-man-dreamcast-front-cover.jpg" width="416" height="400"> <br>
+<img src="https://repository-images.githubusercontent.com/667122691/9f605254-fb16-4fdf-b179-632919ad18ff" width="1000" height="1000"> <br>
 
 > [!TIP]
 > **This project is getting updated daily, monthly or even annually.** <br>
