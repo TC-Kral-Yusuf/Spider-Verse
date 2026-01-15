@@ -6,7 +6,7 @@
 > **Please ensure, that your Mod Menu is always up-to-date.**
 
 > [!IMPORTANT]
-> **Project: Spider-Verse is only supported on <ins>Windows 11.</ins>**
+> **Project: Spider-Verse is only supported on <ins>Windows 11 and requires .NET 10.</ins>**
 
 ## 1️⃣ DISCLAIMER
 ℹ️ Credit must be given when posting previews or footages. <br>
