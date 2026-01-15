@@ -2,11 +2,13 @@
 ✅ Unique HUDs for ALL costumes <br>
 ✅ New GUI Design <br>
 ✅ Added New Suit: Brand New Day <br>
+✅ Added New Suit: Community Suit (Specialist12 Armored Suit) <br>
 ✅ Improved MCU Suits <br>
 ✅ Improved Advanced Suits <br>
 ✅ Improved Webbed PS1 Suits <br>
 ✅ Improved Todd McFarlane Suit <br>
-✅ Improved Symbiote Suits (Classic, Ultimate, Black, Anti)
+✅ Improved Symbiote Suits (Classic, Ultimate, Black, Anti) <br>
+✅ Recolored Raimi Suits
 
 ## Version 2.0.9
 ✅ Improved Raimi Suits + Venom (2007) <br>
