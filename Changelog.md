@@ -1,4 +1,8 @@
-## Version 2.1.0
+## Version 3.0.1
+✅ Shared handler for Mod Category buttons <br>
+✅ Prevent reloading same Mod Category
+
+## Version 3.0.0
 ✅ Unique HUDs for ALL costumes <br>
 ✅ New GUI Design <br>
 ✅ Added New Suit: Brand New Day <br>
