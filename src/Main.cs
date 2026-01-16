@@ -13,6 +13,7 @@ namespace Spider_Verse
         // Includes all necessary actions when the MainForm has been loaded, such as the Single-Instance Check, as well as checking the data directory.
         private void Main_Load(object sender, EventArgs e)
         {
+            ClearValues();
             fswDir.Path = baseDir;
             currentVersion = new(Application.ProductVersion);
             CheckDataPath();
@@ -20,7 +21,7 @@ namespace Spider_Verse
             ConfigLoad();
         }
 
-        // Triggered when the MainForm is first displayed.
+        // Triggered when the MainForm is first displayed. In this scenario, its defined as async void and not Task, since Events are ALWAYS void in C#.
         private async void Main_Shown(object sender, EventArgs e)
         {
             RefreshUI();
@@ -70,33 +71,6 @@ namespace Spider_Verse
         {
             PlaySFX(Properties.Resources.Pop);
             StartFlycast();
-        }
-
-        // Loading all Costumes (Objectives) into the first Listbox (left side).
-        private void btn_Costumes_Click(object sender, EventArgs e)
-        {
-            PlaySFX(Properties.Resources.Pop);
-            ClearValues();
-            selectedType = ModCategory.Costumes;
-            LoadObj();
-        }
-
-        // Loading all Characters (Objectives) into the first Listbox (left side).
-        private void btn_Chars_Click(object sender, EventArgs e)
-        {
-            PlaySFX(Properties.Resources.Pop);
-            ClearValues();
-            selectedType = ModCategory.Characters;
-            LoadObj();
-        }
-
-        // Loading all Graphic/Texture Mods (Objectives) into the first Listbox (left side).
-        private void btn_Gfx_Click(object sender, EventArgs e)
-        {
-            PlaySFX(Properties.Resources.Pop);
-            ClearValues();
-            selectedType = ModCategory.Graphics;
-            LoadObj();
         }
 
         // Enable the selected Mod from the right Listbox by copying all files to the "textures" folder within the Flycast directory.
