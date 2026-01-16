@@ -2,6 +2,43 @@
 {
     public partial class Main : Form
     {
+        // Initializing a shared button handler, whenever a Mod Category is selected. 
+        private void btn_LoadType_Click(object sender, EventArgs e)
+        {
+            PlaySFX(Properties.Resources.Pop);
+            ModCategory newType;
+
+            if (sender == btn_Costumes) newType = ModCategory.Costumes;
+            else if (sender == btn_Chars) newType = ModCategory.Characters;
+            else if (sender == btn_Gfx) newType = ModCategory.Graphics;
+            else return;
+
+            if (newType == selectedLastType) return;
+
+            ClearValues();
+            selectedType = newType;
+            selectedLastType = newType;
+            LoadObj();
+        }
+
+        // Load the selected Mod Category into the left Listbox
+        private void LoadType(ref ModCategory selectedType, ref ModCategory selectedLastType)
+        {
+            try
+            {
+                if (selectedType != selectedLastType)
+                {
+                    selectedLastType = selectedType;
+                    LoadObj();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         // If the selected Mod Category exists AND not empty, then load all Objectives into the left Listbox.
         private void LoadObj()
         {
@@ -94,11 +131,12 @@
                 string src = Path.Combine(dataPath, selectedType.ToString(), selectedObj, selectedMod);
                 string dst = Path.Combine(emuPath, "data", "textures", "T13008N");
 
-                if (!ValidateModSelection())
+                if (!ValidateModSelection() || isBusy)
                 {
                     return;
                 }
 
+                isBusy = true;
                 await CopyFiles(src, dst);
 
                 if (cb_HUD.Checked) await CopyDefaultHUD();
@@ -108,6 +146,11 @@
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                isBusy = false;
             }
         }
 
@@ -120,10 +163,12 @@
                 string dst = Path.Combine(emuPath, "data", "textures", "T13008N");
                 bool isFound = false;
 
-                if (!ValidateModSelection())
+                if (!ValidateModSelection() || isBusy)
                 {
                     return;
                 }
+
+                isBusy = true;
 
                 foreach (var d in Directory.GetDirectories(src))
                 {
@@ -158,6 +203,11 @@
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            finally
+            {
+                isBusy = false;
+            }
         }
 
         // Deleting and recreating the Flycast texture directory.
@@ -173,8 +223,15 @@
                     return;
                 }
 
+                if (isBusy) return;
+
+                isBusy = true;
                 DialogResult dr = MessageBox.Show("Do you really want to disable all Mods? This cannot be undone.", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr != DialogResult.Yes) return;
+                if (dr != DialogResult.Yes)
+                {
+                    isBusy = false;
+                    return;
+                }
 
                 Directory.Delete(dst, true);
                 Directory.CreateDirectory(dst);
@@ -185,6 +242,11 @@
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                isBusy = false;
             }
         }
 

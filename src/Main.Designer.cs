@@ -176,7 +176,7 @@
             btn_Costumes.TextAlign = ContentAlignment.MiddleLeft;
             btn_Costumes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Costumes.UseVisualStyleBackColor = false;
-            btn_Costumes.Click += btn_Costumes_Click;
+            btn_Costumes.Click += this.btn_LoadType_Click;
             // 
             // btn_Chars
             // 
@@ -201,7 +201,7 @@
             btn_Chars.TextAlign = ContentAlignment.MiddleLeft;
             btn_Chars.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Chars.UseVisualStyleBackColor = false;
-            btn_Chars.Click += btn_Chars_Click;
+            btn_Chars.Click += this.btn_LoadType_Click;
             // 
             // btn_Gfx
             // 
@@ -226,7 +226,7 @@
             btn_Gfx.TextAlign = ContentAlignment.MiddleLeft;
             btn_Gfx.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Gfx.UseVisualStyleBackColor = false;
-            btn_Gfx.Click += btn_Gfx_Click;
+            btn_Gfx.Click += this.btn_LoadType_Click;
             // 
             // btn_Disable
             // 

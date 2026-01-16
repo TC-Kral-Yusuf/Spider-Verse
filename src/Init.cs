@@ -36,6 +36,9 @@
         // Initialize bool variable to set the Restart flag.
         private bool isRestartRequired = false;
 
+        // Initialize bool variable to set the Busy flag (e.g while installing or uninstalling mods).
+        private bool isBusy = false;
+
         // Initialize Mod Category, Objective and Mod - mostly used for checks and path combining. Using ModCategory instead of the string datatype, since its more prone to errors.
         enum ModCategory
         {
@@ -44,7 +47,8 @@
             Characters,
             Graphics
         }
-        private ModCategory selectedType;
+        private ModCategory selectedType = ModCategory.None;
+        private ModCategory selectedLastType = ModCategory.None;
         private string selectedObj = string.Empty;
         private string selectedLastObj = string.Empty;
         private string selectedMod = string.Empty;

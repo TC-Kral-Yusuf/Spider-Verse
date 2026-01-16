@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Text.Json;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Spider_Verse
 {
@@ -71,5 +70,4 @@ namespace Spider_Verse
             if (autoUpdateCheckToolStripMenuItem.Checked) await GetUpdates();
         }
     }
-
 }
