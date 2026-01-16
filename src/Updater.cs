@@ -34,7 +34,7 @@ namespace Spider_Verse
             }
         }
 
-        // Output a MessageBox, if there a new Update for this tool is available.
+        // Output a MessageBox, if a new update for this tool is available.
         private async Task ShowUpdateMsg()
         {
             try
@@ -71,4 +71,5 @@ namespace Spider_Verse
             if (autoUpdateCheckToolStripMenuItem.Checked) await GetUpdates();
         }
     }
+
 }
