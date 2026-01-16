@@ -44,21 +44,21 @@
 ✅ Fixed an issue, where update-related MessageBoxes have shown up randomly
 
 ## Version 2.0.4
-✅ Fixed a bug, where the "config loaded" MessageBox shows up randomly
+✅ Fixed a bug, where the "config loaded" MessageBox shows up randomly <br>
 ✅ Arachnid-Youth Costumes has been removed from the entire project
 
 ## Version 2.0.3
-✅ Removed the ugly redundant if-else statements
-✅ Less functions and better consistency
+✅ Removed the ugly redundant if-else statements <br>
+✅ Less functions and better consistency <br>
 ✅ Fixed an issue, where the search bar did not work and was not enabled
 
 ## Version 2.0.2
-✅ Enhanced source code with much better functionalities
-✅ Fixed an issue, where costumes couldn't be enabled or selected
-✅ Fixed an issue, where disabled buttons got enabled randomly
+✅ Enhanced source code with much better functionalities <br>
+✅ Fixed an issue, where costumes couldn't be enabled or selected <br>
+✅ Fixed an issue, where disabled buttons got enabled randomly <br>
 ✅ Removed a specific MessageBox, which shows the current character / objective
 
 ## Version 2.0.1
-✅ Fixed an issue, where several buttons don't get enabled after path update
-✅ Fixed an issue, where listbox does not clean up after path update
+✅ Fixed an issue, where several buttons don't get enabled after path update <br>
+✅ Fixed an issue, where listbox does not clean up after path update <br>
 ✅ Fixed an issue, where buttons get re-enabled by changing data files
