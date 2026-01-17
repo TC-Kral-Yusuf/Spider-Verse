@@ -35,6 +35,7 @@ namespace Spider_Verse
         private void ClearValues()
         {
             selectedType = ModCategory.None;
+            selectedLastType = ModCategory.None;
             selectedObj = string.Empty;
             selectedLastObj = string.Empty;
             tb_Search.Text = string.Empty;
@@ -153,4 +154,5 @@ namespace Spider_Verse
             }
         }
     }
+
 }
