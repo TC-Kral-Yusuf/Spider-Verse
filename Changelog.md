@@ -1,3 +1,7 @@
+## Version 3.0.2
+✅ Fixed a bug, which didn't reset the previous selected type name <br>
+✅ Fixed health bar position
+
 ## Version 3.0.1
 ✅ Shared handler for Mod Category buttons <br>
 ✅ Prevent reloading same Mod Category
