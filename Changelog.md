@@ -1,3 +1,6 @@
+## Version 3.0.3
+✅ Added Amazing Symbiote Suit (2014)
+
 ## Version 3.0.2
 ✅ Fixed a bug, which didn't reset the previous selected type name <br>
 ✅ Fixed health bar position
