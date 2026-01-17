@@ -70,6 +70,7 @@
             btn_CheckUpdate = new Button();
             btn_YouTube = new Button();
             btn_GitHub = new Button();
+            lbl_Version = new Label();
             mStrip.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -176,7 +177,7 @@
             btn_Costumes.TextAlign = ContentAlignment.MiddleLeft;
             btn_Costumes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Costumes.UseVisualStyleBackColor = false;
-            btn_Costumes.Click += this.btn_LoadType_Click;
+            btn_Costumes.Click += btn_LoadType_Click;
             // 
             // btn_Chars
             // 
@@ -201,7 +202,7 @@
             btn_Chars.TextAlign = ContentAlignment.MiddleLeft;
             btn_Chars.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Chars.UseVisualStyleBackColor = false;
-            btn_Chars.Click += this.btn_LoadType_Click;
+            btn_Chars.Click += btn_LoadType_Click;
             // 
             // btn_Gfx
             // 
@@ -226,7 +227,7 @@
             btn_Gfx.TextAlign = ContentAlignment.MiddleLeft;
             btn_Gfx.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Gfx.UseVisualStyleBackColor = false;
-            btn_Gfx.Click += this.btn_LoadType_Click;
+            btn_Gfx.Click += btn_LoadType_Click;
             // 
             // btn_Disable
             // 
@@ -684,6 +685,18 @@
             btn_GitHub.UseVisualStyleBackColor = false;
             btn_GitHub.Click += btn_GitHub_Click;
             // 
+            // lbl_Version
+            // 
+            lbl_Version.AutoSize = true;
+            lbl_Version.Font = new Font("Aptos SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_Version.ForeColor = Color.White;
+            lbl_Version.Location = new Point(1210, 721);
+            lbl_Version.Name = "lbl_Version";
+            lbl_Version.Size = new Size(48, 19);
+            lbl_Version.TabIndex = 21;
+            lbl_Version.Text = "v3.0.0";
+            lbl_Version.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -691,6 +704,7 @@
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.Background1;
             ClientSize = new Size(1259, 748);
+            Controls.Add(lbl_Version);
             Controls.Add(groupBox4);
             Controls.Add(lst_Obj);
             Controls.Add(groupBox3);
@@ -765,5 +779,6 @@
         private Button btn_CheckUpdate;
         private Button btn_YouTube;
         private Button btn_GitHub;
+        private Label lbl_Version;
     }
 }

@@ -16,6 +16,7 @@ namespace Spider_Verse
             ClearValues();
             fswDir.Path = baseDir;
             currentVersion = new(Application.ProductVersion);
+            lbl_Version.Text = $"v{currentVersion.ToString()}";
             CheckDataPath();
             CheckToolInstance();
             ConfigLoad();
