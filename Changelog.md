@@ -1,4 +1,4 @@
-## Version 3.0.2 (Latest)
+## Version 3.0.2
 ✅ Fixed a bug, which didn't reset the previous selected type name <br>
 ✅ Fixed health bar position
 
