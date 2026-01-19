@@ -1,3 +1,11 @@
+## Version 3.0.4
+✅ Improved Upscaled Symbiote HUDs <br>
+✅ Improved Raimi Suits using a cleaner web pattern <br>
+✅ Improved Classic Symbiote Webbed Suits <br>
+✅ Improved Amazing Symbiote Suit (2014) <br>
+✅ Improved Dreamcast Button Textures <br>
+✅ Select between Dreamcast and PlayStation Button Textures
+
 ## Version 3.0.3
 ✅ Added Amazing Symbiote Suit (2014)
 
@@ -6,7 +14,7 @@
 ✅ Fixed health bar position
 
 ## Version 3.0.1
-✅ Shared handler for Mod Category buttons <br>
+✅ Shared handler for Mod Category Buttons <br>
 ✅ Prevent reloading same Mod Category
 
 ## Version 3.0.0
