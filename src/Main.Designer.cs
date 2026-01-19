@@ -690,7 +690,7 @@
             lbl_Version.AutoSize = true;
             lbl_Version.Font = new Font("Aptos SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_Version.ForeColor = Color.White;
-            lbl_Version.Location = new Point(1210, 721);
+            lbl_Version.Location = new Point(1211, 726);
             lbl_Version.Name = "lbl_Version";
             lbl_Version.Size = new Size(48, 19);
             lbl_Version.TabIndex = 21;
