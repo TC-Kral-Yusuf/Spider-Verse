@@ -2,7 +2,7 @@
 ✅ Added All New Remastered Fonts <br>
 ✅ Added Battle Damaged Raimi Suits <br>
 ✅ Added Remastered Doc-Ock <br>
-✅ Added new textures for Venom <br>
+✅ Added New Textures for Venom <br>
 ✅ Recolored Black Raimi Suits <br>
 ✅ Corrected Iron-Spider HUD <br>
 ✅ Corrected HUD vertical bar position <br>
