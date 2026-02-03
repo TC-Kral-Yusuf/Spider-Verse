@@ -12,7 +12,7 @@
     <RootNamespace>Spider_Verse</RootNamespace>
     <NuGetAuditLevel>low</NuGetAuditLevel>
     <SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>
-    <Version>3.0.4</Version>
+    <Version>3.0.5</Version>
     <ApplicationIcon>files\image\SpiderIcon.ico</ApplicationIcon>
     <Copyright>Developed by © T.C Kral-Yusuf</Copyright>
     <Description>Spider-Man (2001) Mod Menu</Description>
