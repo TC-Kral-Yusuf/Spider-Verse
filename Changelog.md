@@ -1,3 +1,13 @@
+## Version 3.0.5
+✅ Added All New Remastered Fonts <br>
+✅ Added Battle Damaged Raimi Suits <br>
+✅ Added Remastered Doc-Ock <br>
+✅ Added new textures for Venom <br>
+✅ Recolored Black Raimi Suits <br>
+✅ Corrected Iron-Spider HUD <br>
+✅ Corrected HUD vertical bar position <br>
+✅ Corrected hand textures of all Raimi Suits
+
 ## Version 3.0.4
 ✅ Improved Upscaled Symbiote HUDs <br>
 ✅ Improved Raimi Suits using a cleaner web pattern <br>
