@@ -1,3 +1,6 @@
+## Version 3.0.6
+✅ i forgot to add the new venom mods and delete mod duplicates lol, sorry.
+
 ## Version 3.0.5
 ✅ Added All New Remastered Fonts <br>
 ✅ Added Battle Damaged Raimi Suits <br>
