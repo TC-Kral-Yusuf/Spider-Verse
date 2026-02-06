@@ -61,6 +61,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Spider-Patcher";
             FormClosing += Main_FormClosing;
+            Load += Main_Load;
             Shown += Main_Shown;
             ResumeLayout(false);
         }
