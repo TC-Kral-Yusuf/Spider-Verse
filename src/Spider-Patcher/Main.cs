@@ -31,11 +31,7 @@ namespace Spider_Patcher
         // Avoid and close multiple instances on load.
         private void Main_Load(object sender, EventArgs e)
         {
-            Mutex singleInstanceMutex = new(true, "Spider-Patcher");
-            if (!singleInstanceMutex.WaitOne(0, false))
-            {
-                Environment.Exit(1);
-            }
+            CheckInstance();
         }
 
         // Avoid closing the tool while the patch is running.
@@ -46,20 +42,6 @@ namespace Spider_Patcher
                 MessageBox.Show("Patch is still running, please wait.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Cancel = true;
                 return;
-            }
-        }
-
-        // Function for copying all patch files into the data directory.
-        private async Task RunPatch()
-        {
-            try
-            {
-                await PatchFunc();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An Error has occured:\n\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

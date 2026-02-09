@@ -36,13 +36,13 @@
             // 
             lstOutput.BackColor = Color.Black;
             lstOutput.BorderStyle = BorderStyle.FixedSingle;
-            lstOutput.Font = new Font("Aptos SemiBold", 12F, FontStyle.Bold);
+            lstOutput.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lstOutput.ForeColor = Color.Lime;
             lstOutput.FormattingEnabled = true;
-            lstOutput.Location = new Point(12, 12);
+            lstOutput.Location = new Point(0, 0);
             lstOutput.Name = "lstOutput";
             lstOutput.SelectionMode = SelectionMode.None;
-            lstOutput.Size = new Size(756, 522);
+            lstOutput.Size = new Size(780, 548);
             lstOutput.TabIndex = 0;
             lstOutput.TabStop = false;
             // 
@@ -51,7 +51,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(780, 557);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(780, 548);
             Controls.Add(lstOutput);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.Fixed3D;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Spider_Patcher
@@ -16,7 +17,7 @@ namespace Spider_Patcher
                 foreach (var file in Directory.GetFiles(sourceDir))
                 {
                     string targetFile = Path.Combine(targetDir, Path.GetFileName(file));
-                    File.Copy(file, targetFile, true);
+                    File.Move(file, targetFile, true);
                 }
 
                 foreach (var dir in Directory.GetDirectories(sourceDir))
@@ -27,46 +28,78 @@ namespace Spider_Patcher
             });
         }
 
-        private async Task PatchFunc()
+        // Avoid the Patcher from starting if the Spider-Verse tool is active or if there is already a Patcher instance using Mutex. 
+        private void CheckInstance()
         {
-            isBusy = true;
-            lstOutput.Items.Clear();
-            var costPath = Path.Combine(dataPath, "Costumes");
-            var charPath = Path.Combine(dataPath, "Characters");
-            var gfxPath = Path.Combine(dataPath, "Graphics");
-            var exePath = Path.Combine(baseDir, "Spider-Verse.exe");
-
-            // Patching the Spider-Verse executable.
-            lstOutput.Items.Add("Patching Spider-Verse.exe...");
-            File.Copy(Path.Combine(patchPath, "Spider-Verse.exe"), exePath, true);
-
-            // Patching Costume mods.
-            lstOutput.Items.Add("Patching Costumes...");
-            await CopyFiles(Path.Combine(patchPath, "data", "Costumes"), costPath);
-
-            // Patching Character mods.
-            lstOutput.Items.Add("Patching Characters...");
-            if (Directory.Exists(charPath))
+            Process[] proc = Process.GetProcessesByName("Spider-Verse");
+            if (proc.Length > 0)
             {
-                Directory.Delete(charPath, true);
+                MessageBox.Show("Please exit Spider-Verse.exe before you run the Patcher! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+                return;
             }
-            await CopyFiles(Path.Combine(patchPath, "data", "Characters"), charPath);
 
-            // Patching Graphic mods.
-            lstOutput.Items.Add("Patching Graphics...");
-            if (Directory.Exists(gfxPath))
+            Mutex singleInstanceMutex = new(true, "Spider-Patcher");
+            if (!singleInstanceMutex.WaitOne(0, false))
             {
-                Directory.Delete(gfxPath, true);
+                Environment.Exit(1);
             }
-            await CopyFiles(Path.Combine(patchPath, "data", "Graphics"), gfxPath);
+        }
 
-            // Finish the patch process and copy the next Spider-Verse executable file.
-            isBusy = false;
-            lstOutput.Items.Add("Removing Patch Folder...");
-            Directory.Delete(patchPath, true);
-            lstOutput.Items.Add("✅ PATCH COMPLETE!");
-            MessageBox.Show("Files have been successfully patched!\n\nClick OK to finish.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Application.Exit();
+        // This function patches all files by copying/removing the respective mod files.
+        private async Task RunPatch()
+        {
+            try
+            {
+                isBusy = true;
+                lstOutput.Items.Clear();
+                var costPath = Path.Combine(dataPath, "Costumes");
+                var charPath = Path.Combine(dataPath, "Characters");
+                var gfxPath = Path.Combine(dataPath, "Graphics");
+                var exePath = Path.Combine(baseDir, "Spider-Verse.exe");
+
+                // Patching the Spider-Verse executable.
+                lstOutput.Items.Add("PATCH RUNNING - PLEASE WAIT!");
+                lstOutput.Items.Add("PATCHING: Spider-Verse.exe");
+                File.Copy(Path.Combine(patchPath, "Spider-Verse.exe"), exePath, true);
+
+                // Patching Costume mods.
+                lstOutput.Items.Add("PATCHING: Costumes");
+                await CopyFiles(Path.Combine(patchPath, "data", "Costumes"), costPath);
+
+                // Patching Character mods.
+                lstOutput.Items.Add("PATCHING: Characters");
+                if (Directory.Exists(charPath))
+                {
+                    Directory.Delete(charPath, true);
+                }
+                await CopyFiles(Path.Combine(patchPath, "data", "Characters"), charPath);
+
+                // Patching Graphic mods.
+                lstOutput.Items.Add("PATCHING: Graphics");
+                if (Directory.Exists(gfxPath))
+                {
+                    Directory.Delete(gfxPath, true);
+                }
+                await CopyFiles(Path.Combine(patchPath, "data", "Graphics"), gfxPath);
+
+                // Finish the patch process and copy the next Spider-Verse executable file.
+                lstOutput.Items.Add("DELETING: Patch Folder");
+                Directory.Delete(patchPath, true);
+                lstOutput.Items.Add("SUCCESS: PATCH COMPLETE!");
+                MessageBox.Show("Patched successfully!\n\nClick OK to finish.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An Error has occured:\n\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                isBusy = false;
+                Application.Exit();
+            }
         }
     }
 }
