@@ -1,3 +1,10 @@
+## Version 3.0.7
+✅ Brand New File Patcher <br>
+✅ Updated GUI <br>
+✅ Updated Bully Maguire for Peter Parker <br>
+✅ Corrected Spider-Armor HUD Position <br>
+✅ Source Code Optimization
+
 ## Version 3.0.6
 ✅ i forgot to add the new venom mods and delete mod duplicates lol, sorry.
 
