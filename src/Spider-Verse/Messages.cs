@@ -19,6 +19,7 @@
         private const string errorConfigLoad = "Error: There is no config file to load.";
         private const string errorConfigDelete = "Error: There is no config file to delete.";
         private const string errorDefaultHUD = "Error: Default HUD cannot be installed. Either the source path doesn't exist or it has been renamed.";
+        private const string errorPatchRunning = "Error: Cannot start tool while the Patcher is running.";
 
         // Success messages are defined as const strings, since they are immutable and resolved at compile time.
         private const string successEmuPath = "Success: Flycast has been found.";

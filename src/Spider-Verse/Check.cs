@@ -1,15 +1,26 @@
-﻿namespace Spider_Verse
+﻿using System.Diagnostics;
+
+namespace Spider_Verse
 {
     public partial class Main : Form
     {
-        // Mutex function to avoid multiple instances of the current process / tool.
+        // Avoid the tool from starting if the Patcher is active or if there is already a Spider-Verse.exe instance using Mutex.
         private void CheckToolInstance()
         {
+            Process[] proc = Process.GetProcessesByName("Spider-Patcher");
+            if (proc.Length > 0)
+            {
+                MessageBox.Show(errorPatchRunning, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+                return;
+            }
+
             Mutex singleInstanceMutex = new(true, "Spider-Verse");
             if (!singleInstanceMutex.WaitOne(0, false))
             {
                 MessageBox.Show(errorToolInstance, "Instance Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(1);
+                return;
             }
         }
 

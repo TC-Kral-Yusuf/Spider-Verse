@@ -1,4 +1,5 @@
-﻿using System.Media;
+﻿using System.Diagnostics;
+using System.Media;
 
 namespace Spider_Verse
 {
@@ -28,6 +29,16 @@ namespace Spider_Verse
                     string targetSubDir = Path.Combine(targetDir, Path.GetFileName(dir));
                     await CopyFiles(dir, targetSubDir);
                 }
+            });
+        }
+
+        // Open the URL in the default browser.
+        private void OpenInBrowser(string url)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
             });
         }
 

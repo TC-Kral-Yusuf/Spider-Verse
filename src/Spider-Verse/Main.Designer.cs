@@ -59,25 +59,25 @@
             tb_Path = new TextBox();
             cb_HUD = new CheckBox();
             groupBox1 = new GroupBox();
+            btn_CheckUpdate = new Button();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            label1 = new Label();
             fswDir = new FileSystemWatcher();
             fswEmu = new FileSystemWatcher();
             lst_Obj = new ListBox();
             fswDirTimer = new System.Windows.Forms.Timer(components);
             fswEmuTimer = new System.Windows.Forms.Timer(components);
-            groupBox4 = new GroupBox();
-            btn_CheckUpdate = new Button();
+            btn_Donate = new Button();
             btn_YouTube = new Button();
             btn_GitHub = new Button();
-            lbl_Version = new Label();
+            btn_Discord = new Button();
             mStrip.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)fswDir).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fswEmu).BeginInit();
-            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // btn_Flycast
@@ -243,7 +243,7 @@
             btn_Disable.ForeColor = Color.Black;
             btn_Disable.Image = Properties.Resources.Disable;
             btn_Disable.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Disable.Location = new Point(16, 139);
+            btn_Disable.Location = new Point(16, 157);
             btn_Disable.Name = "btn_Disable";
             btn_Disable.Size = new Size(216, 42);
             btn_Disable.TabIndex = 1;
@@ -268,7 +268,7 @@
             btn_Reset.ForeColor = Color.Black;
             btn_Reset.Image = Properties.Resources.RecycleBin;
             btn_Reset.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Reset.Location = new Point(16, 194);
+            btn_Reset.Location = new Point(16, 212);
             btn_Reset.Name = "btn_Reset";
             btn_Reset.Size = new Size(216, 42);
             btn_Reset.TabIndex = 4;
@@ -293,7 +293,7 @@
             btn_Enable.ForeColor = Color.Black;
             btn_Enable.Image = Properties.Resources.Enable;
             btn_Enable.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Enable.Location = new Point(16, 84);
+            btn_Enable.Location = new Point(16, 102);
             btn_Enable.Name = "btn_Enable";
             btn_Enable.Size = new Size(216, 42);
             btn_Enable.TabIndex = 0;
@@ -454,10 +454,11 @@
             lst_Mods.FormattingEnabled = true;
             lst_Mods.Location = new Point(634, 90);
             lst_Mods.Name = "lst_Mods";
-            lst_Mods.Size = new Size(370, 650);
+            lst_Mods.Size = new Size(370, 498);
             lst_Mods.Sorted = true;
             lst_Mods.TabIndex = 4;
             lst_Mods.TabStop = false;
+            lst_Mods.UseTabStops = false;
             lst_Mods.SelectedIndexChanged += lst_Mods_SelectedIndexChanged;
             // 
             // tb_Search
@@ -467,7 +468,7 @@
             tb_Search.Enabled = false;
             tb_Search.Font = new Font("Aptos", 10F);
             tb_Search.ForeColor = Color.Black;
-            tb_Search.Location = new Point(16, 36);
+            tb_Search.Location = new Point(16, 54);
             tb_Search.Name = "tb_Search";
             tb_Search.Size = new Size(216, 24);
             tb_Search.TabIndex = 10;
@@ -497,7 +498,7 @@
             cb_HUD.Font = new Font("Aptos", 11F);
             cb_HUD.ForeColor = Color.White;
             cb_HUD.ImageAlign = ContentAlignment.MiddleLeft;
-            cb_HUD.Location = new Point(16, 255);
+            cb_HUD.Location = new Point(16, 273);
             cb_HUD.Name = "cb_HUD";
             cb_HUD.Size = new Size(200, 23);
             cb_HUD.TabIndex = 14;
@@ -510,27 +511,51 @@
             // 
             groupBox1.BackColor = Color.Black;
             groupBox1.Controls.Add(btn_Download);
+            groupBox1.Controls.Add(btn_CheckUpdate);
             groupBox1.Controls.Add(btn_Browse);
             groupBox1.Controls.Add(btn_Flycast);
             groupBox1.Font = new Font("Aptos", 13F, FontStyle.Bold);
             groupBox1.ForeColor = Color.FromArgb(150, 150, 255);
             groupBox1.Location = new Point(1, 90);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(248, 200);
+            groupBox1.Size = new Size(248, 255);
             groupBox1.TabIndex = 17;
             groupBox1.TabStop = false;
             groupBox1.Text = "Setup";
             // 
+            // btn_CheckUpdate
+            // 
+            btn_CheckUpdate.BackColor = Color.Gainsboro;
+            btn_CheckUpdate.Cursor = Cursors.Hand;
+            btn_CheckUpdate.FlatAppearance.BorderColor = Color.Black;
+            btn_CheckUpdate.FlatAppearance.BorderSize = 0;
+            btn_CheckUpdate.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 192, 255);
+            btn_CheckUpdate.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 128, 255);
+            btn_CheckUpdate.FlatStyle = FlatStyle.Flat;
+            btn_CheckUpdate.Font = new Font("Aptos", 10F);
+            btn_CheckUpdate.ForeColor = Color.Black;
+            btn_CheckUpdate.Image = Properties.Resources.Update;
+            btn_CheckUpdate.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_CheckUpdate.Location = new Point(16, 195);
+            btn_CheckUpdate.Name = "btn_CheckUpdate";
+            btn_CheckUpdate.Size = new Size(216, 42);
+            btn_CheckUpdate.TabIndex = 2;
+            btn_CheckUpdate.TabStop = false;
+            btn_CheckUpdate.Text = "Check for Updates";
+            btn_CheckUpdate.TextAlign = ContentAlignment.MiddleLeft;
+            btn_CheckUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_CheckUpdate.UseVisualStyleBackColor = false;
+            btn_CheckUpdate.Click += btn_CheckUpdate_Click;
+            // 
             // groupBox2
             // 
             groupBox2.BackColor = Color.Black;
-            groupBox2.BackgroundImageLayout = ImageLayout.None;
             groupBox2.Controls.Add(btn_Gfx);
             groupBox2.Controls.Add(btn_Costumes);
             groupBox2.Controls.Add(btn_Chars);
             groupBox2.Font = new Font("Aptos", 13F, FontStyle.Bold);
             groupBox2.ForeColor = Color.FromArgb(150, 150, 255);
-            groupBox2.Location = new Point(1, 315);
+            groupBox2.Location = new Point(1, 360);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(248, 200);
             groupBox2.TabIndex = 18;
@@ -540,6 +565,7 @@
             // groupBox3
             // 
             groupBox3.BackColor = Color.Black;
+            groupBox3.Controls.Add(label1);
             groupBox3.Controls.Add(tb_Search);
             groupBox3.Controls.Add(cb_HUD);
             groupBox3.Controls.Add(btn_Enable);
@@ -549,10 +575,23 @@
             groupBox3.ForeColor = Color.FromArgb(150, 150, 255);
             groupBox3.Location = new Point(1010, 90);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(248, 347);
+            groupBox3.Size = new Size(248, 316);
             groupBox3.TabIndex = 19;
             groupBox3.TabStop = false;
             groupBox3.Text = "Mod Settings";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Aptos SemiBold", 11F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(16, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(116, 19);
+            label1.TabIndex = 22;
+            label1.Text = "Search for Mods";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // fswDir
             // 
@@ -581,9 +620,10 @@
             lst_Obj.FormattingEnabled = true;
             lst_Obj.Location = new Point(255, 90);
             lst_Obj.Name = "lst_Obj";
-            lst_Obj.Size = new Size(370, 650);
+            lst_Obj.Size = new Size(370, 498);
             lst_Obj.TabIndex = 20;
             lst_Obj.TabStop = false;
+            lst_Obj.UseTabStops = false;
             lst_Obj.SelectedIndexChanged += lst_Obj_SelectedIndexChanged;
             // 
             // fswDirTimer
@@ -596,50 +636,32 @@
             fswEmuTimer.Interval = 250;
             fswEmuTimer.Tick += fswEmuTimer_Tick;
             // 
-            // groupBox4
+            // btn_Donate
             // 
-            groupBox4.BackColor = Color.Black;
-            groupBox4.BackgroundImageLayout = ImageLayout.None;
-            groupBox4.Controls.Add(btn_CheckUpdate);
-            groupBox4.Controls.Add(btn_YouTube);
-            groupBox4.Controls.Add(btn_GitHub);
-            groupBox4.Font = new Font("Aptos", 13F, FontStyle.Bold);
-            groupBox4.ForeColor = Color.FromArgb(150, 150, 255);
-            groupBox4.Location = new Point(1, 540);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(248, 200);
-            groupBox4.TabIndex = 19;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Miscellaneous";
-            // 
-            // btn_CheckUpdate
-            // 
-            btn_CheckUpdate.BackColor = Color.Gainsboro;
-            btn_CheckUpdate.Cursor = Cursors.Hand;
-            btn_CheckUpdate.FlatAppearance.BorderColor = Color.Black;
-            btn_CheckUpdate.FlatAppearance.BorderSize = 0;
-            btn_CheckUpdate.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 192, 255);
-            btn_CheckUpdate.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 128, 255);
-            btn_CheckUpdate.FlatStyle = FlatStyle.Flat;
-            btn_CheckUpdate.Font = new Font("Aptos", 10F);
-            btn_CheckUpdate.ForeColor = Color.Black;
-            btn_CheckUpdate.Image = Properties.Resources.Update;
-            btn_CheckUpdate.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_CheckUpdate.Location = new Point(16, 140);
-            btn_CheckUpdate.Name = "btn_CheckUpdate";
-            btn_CheckUpdate.Size = new Size(216, 42);
-            btn_CheckUpdate.TabIndex = 2;
-            btn_CheckUpdate.TabStop = false;
-            btn_CheckUpdate.Text = "Check for Updates";
-            btn_CheckUpdate.TextAlign = ContentAlignment.MiddleLeft;
-            btn_CheckUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_CheckUpdate.UseVisualStyleBackColor = false;
-            btn_CheckUpdate.Click += btn_CheckUpdate_Click;
+            btn_Donate.BackColor = Color.Khaki;
+            btn_Donate.BackgroundImage = Properties.Resources.Donate;
+            btn_Donate.BackgroundImageLayout = ImageLayout.Center;
+            btn_Donate.Cursor = Cursors.Hand;
+            btn_Donate.FlatAppearance.BorderColor = Color.Black;
+            btn_Donate.FlatAppearance.BorderSize = 0;
+            btn_Donate.FlatStyle = FlatStyle.Flat;
+            btn_Donate.Font = new Font("Aptos", 10F);
+            btn_Donate.ForeColor = Color.Black;
+            btn_Donate.Location = new Point(1226, 556);
+            btn_Donate.Name = "btn_Donate";
+            btn_Donate.Size = new Size(32, 32);
+            btn_Donate.TabIndex = 3;
+            btn_Donate.TabStop = false;
+            btn_Donate.TextAlign = ContentAlignment.MiddleLeft;
+            btn_Donate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Donate.UseVisualStyleBackColor = false;
+            btn_Donate.Click += btn_Donate_Click;
             // 
             // btn_YouTube
             // 
-            btn_YouTube.BackColor = Color.Gainsboro;
-            btn_YouTube.BackgroundImageLayout = ImageLayout.None;
+            btn_YouTube.BackColor = Color.Transparent;
+            btn_YouTube.BackgroundImage = Properties.Resources.YouTube;
+            btn_YouTube.BackgroundImageLayout = ImageLayout.Center;
             btn_YouTube.Cursor = Cursors.Hand;
             btn_YouTube.FlatAppearance.BorderColor = Color.Black;
             btn_YouTube.FlatAppearance.BorderSize = 0;
@@ -648,14 +670,11 @@
             btn_YouTube.FlatStyle = FlatStyle.Flat;
             btn_YouTube.Font = new Font("Aptos", 10F);
             btn_YouTube.ForeColor = Color.Black;
-            btn_YouTube.Image = Properties.Resources.YouTube;
-            btn_YouTube.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_YouTube.Location = new Point(16, 30);
+            btn_YouTube.Location = new Point(1112, 556);
             btn_YouTube.Name = "btn_YouTube";
-            btn_YouTube.Size = new Size(216, 42);
+            btn_YouTube.Size = new Size(32, 32);
             btn_YouTube.TabIndex = 0;
             btn_YouTube.TabStop = false;
-            btn_YouTube.Text = "YouTube";
             btn_YouTube.TextAlign = ContentAlignment.MiddleLeft;
             btn_YouTube.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_YouTube.UseVisualStyleBackColor = false;
@@ -663,7 +682,9 @@
             // 
             // btn_GitHub
             // 
-            btn_GitHub.BackColor = Color.Gainsboro;
+            btn_GitHub.BackColor = Color.Transparent;
+            btn_GitHub.BackgroundImage = Properties.Resources.Github;
+            btn_GitHub.BackgroundImageLayout = ImageLayout.Center;
             btn_GitHub.Cursor = Cursors.Hand;
             btn_GitHub.FlatAppearance.BorderColor = Color.Black;
             btn_GitHub.FlatAppearance.BorderSize = 0;
@@ -672,30 +693,38 @@
             btn_GitHub.FlatStyle = FlatStyle.Flat;
             btn_GitHub.Font = new Font("Aptos", 10F);
             btn_GitHub.ForeColor = Color.Black;
-            btn_GitHub.Image = Properties.Resources.Github;
-            btn_GitHub.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_GitHub.Location = new Point(16, 85);
+            btn_GitHub.Location = new Point(1188, 556);
             btn_GitHub.Name = "btn_GitHub";
-            btn_GitHub.Size = new Size(216, 42);
+            btn_GitHub.Size = new Size(32, 32);
             btn_GitHub.TabIndex = 1;
             btn_GitHub.TabStop = false;
-            btn_GitHub.Text = "GitHub";
             btn_GitHub.TextAlign = ContentAlignment.MiddleLeft;
             btn_GitHub.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_GitHub.UseVisualStyleBackColor = false;
             btn_GitHub.Click += btn_GitHub_Click;
             // 
-            // lbl_Version
+            // btn_Discord
             // 
-            lbl_Version.AutoSize = true;
-            lbl_Version.Font = new Font("Aptos SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_Version.ForeColor = Color.White;
-            lbl_Version.Location = new Point(1211, 726);
-            lbl_Version.Name = "lbl_Version";
-            lbl_Version.Size = new Size(48, 19);
-            lbl_Version.TabIndex = 21;
-            lbl_Version.Text = "v3.0.0";
-            lbl_Version.TextAlign = ContentAlignment.MiddleLeft;
+            btn_Discord.BackColor = Color.Transparent;
+            btn_Discord.BackgroundImage = Properties.Resources.Discord;
+            btn_Discord.BackgroundImageLayout = ImageLayout.Center;
+            btn_Discord.Cursor = Cursors.Hand;
+            btn_Discord.FlatAppearance.BorderColor = Color.Black;
+            btn_Discord.FlatAppearance.BorderSize = 0;
+            btn_Discord.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 192, 255);
+            btn_Discord.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 128, 255);
+            btn_Discord.FlatStyle = FlatStyle.Flat;
+            btn_Discord.Font = new Font("Aptos", 10F);
+            btn_Discord.ForeColor = Color.Black;
+            btn_Discord.Location = new Point(1150, 556);
+            btn_Discord.Name = "btn_Discord";
+            btn_Discord.Size = new Size(32, 32);
+            btn_Discord.TabIndex = 21;
+            btn_Discord.TabStop = false;
+            btn_Discord.TextAlign = ContentAlignment.MiddleLeft;
+            btn_Discord.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Discord.UseVisualStyleBackColor = false;
+            btn_Discord.Click += btn_Discord_Click;
             // 
             // Main
             // 
@@ -703,9 +732,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.Background1;
-            ClientSize = new Size(1259, 748);
-            Controls.Add(lbl_Version);
-            Controls.Add(groupBox4);
+            ClientSize = new Size(1259, 593);
+            Controls.Add(btn_Discord);
+            Controls.Add(btn_Donate);
+            Controls.Add(btn_YouTube);
+            Controls.Add(btn_GitHub);
             Controls.Add(lst_Obj);
             Controls.Add(groupBox3);
             Controls.Add(lst_Mods);
@@ -733,7 +764,6 @@
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fswDir).EndInit();
             ((System.ComponentModel.ISupportInitialize)fswEmu).EndInit();
-            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -775,10 +805,11 @@
         private ListBox lst_Obj;
         private System.Windows.Forms.Timer fswDirTimer;
         private System.Windows.Forms.Timer fswEmuTimer;
-        private GroupBox groupBox4;
         private Button btn_CheckUpdate;
         private Button btn_YouTube;
         private Button btn_GitHub;
-        private Label lbl_Version;
+        private Label label1;
+        private Button btn_Donate;
+        private Button btn_Discord;
     }
 }

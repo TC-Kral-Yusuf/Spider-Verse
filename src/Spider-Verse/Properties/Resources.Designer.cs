@@ -73,13 +73,13 @@ namespace Spider_Verse.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Developed by © T.C. Kral-Yusuf
         ///
-        ///YouTube and GitHub logos are trademarks of their respective owners. Used for linking purposes only.
+        ///YouTube, GitHub and Discord logos are trademarks of their respective owners. Used for linking purposes only.
         ///
         ///Some images/icons provided by Freepik. All rights reserved to the respective owners. Used under Freepik’s free license for personal and community projects.
         ///
         ///Sounds provided by Pixabay.com. All rights reserved to the respective owners.
         ///
-        ///This is an unofficial, fan-made community tool, which is 100% Open Source and is not affiliated with Marvel, Sony, Activision, or Never [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        ///This is an unofficial, fan-made community tool, which is 100% Open Source and is not affiliated with Marvel, Sony, Activision, [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         internal static string AboutText {
             get {
@@ -210,6 +210,26 @@ namespace Spider_Verse.Properties {
         internal static System.Drawing.Bitmap Disable {
             get {
                 object obj = ResourceManager.GetObject("Disable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Discord {
+            get {
+                object obj = ResourceManager.GetObject("Discord", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Donate {
+            get {
+                object obj = ResourceManager.GetObject("Donate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -37,11 +37,7 @@ namespace Spider_Verse
         {
             try
             {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = urlFlycast,
-                    UseShellExecute = true
-                });
+                OpenInBrowser(urlFlycast);
             }
 
             catch (Exception ex)

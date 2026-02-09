@@ -9,8 +9,10 @@
         // Initializing some really important URLs as strings - pretty obvious, right?
         private static readonly string urlFlycast = "https://flyinghead.github.io/flycast-builds/";
         private static readonly string urlAPI = "https://api.github.com/repos/TC-Kral-Yusuf/Spider-Verse/releases/latest";
-        private static readonly string urlGitHub = "https://github.com/TC-Kral-Yusuf";
         private static readonly string urlYouTube = "https://www.youtube.com/@T.C-Kral-Yusuf";
+        private static readonly string urlGitHub = "https://github.com/TC-Kral-Yusuf";
+        private static readonly string urlDiscord = "https://discord.com/invite/xu7skzp6wm";
+        private static readonly string urlDonate = "https://ko-fi.com/tckralyusuf";
 
         // Base directory of the application (where the tool is running).
         private static readonly string baseDir = AppContext.BaseDirectory;

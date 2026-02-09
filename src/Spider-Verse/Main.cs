@@ -16,7 +16,7 @@ namespace Spider_Verse
             ClearValues();
             fswDir.Path = baseDir;
             currentVersion = new(Application.ProductVersion);
-            lbl_Version.Text = $"v{currentVersion.ToString()}";
+            this.Text += $" v{currentVersion.ToString()}";
             CheckDataPath();
             CheckToolInstance();
             ConfigLoad();
@@ -99,22 +99,28 @@ namespace Spider_Verse
         private void btn_YouTube_Click(object sender, EventArgs e)
         {
             PlaySFX(Properties.Resources.Pop);
-            Process.Start(new ProcessStartInfo
-            {
-                FileName = urlYouTube,
-                UseShellExecute = true
-            });
+            OpenInBrowser(urlYouTube);
+        }
+
+        // Opens the default web browser and forwarding to the respective URL - in this case its my Discord server.
+        private void btn_Discord_Click(object sender, EventArgs e)
+        {
+            PlaySFX(Properties.Resources.Pop);
+            OpenInBrowser(urlDiscord);
         }
 
         // Opens the default web browser and forwarding to the respective URL - in this case its my GitHub profile.
         private void btn_GitHub_Click(object sender, EventArgs e)
         {
             PlaySFX(Properties.Resources.Pop);
-            Process.Start(new ProcessStartInfo
-            {
-                FileName = urlGitHub,
-                UseShellExecute = true
-            });
+            OpenInBrowser(urlGitHub);
+        }
+
+        // Opens the default web browser and forwarding to the respective URL - in this case its my Ko-fi profile.
+        private void btn_Donate_Click(object sender, EventArgs e)
+        {
+            PlaySFX(Properties.Resources.Pop);
+            OpenInBrowser(urlDonate);
         }
 
         // Check for newer updates, requires an internet connection.
