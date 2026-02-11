@@ -1,3 +1,11 @@
+## Version 3.0.8
+✅ Remastered All Characters <br>
+✅ Remastered Web Texture <br>
+✅ Corrected Font Positions <br>
+✅ Recolored "Amazing 2014" Suit <br>
+✅ Fixed Back Texture of "Avengers Classic Suit" <br>
+✅ Optimized Source Code for Spider-Patcher
+
 ## Version 3.0.7
 ✅ Brand New File Patcher <br>
 ✅ Updated GUI <br>
