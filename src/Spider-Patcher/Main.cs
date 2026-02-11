@@ -8,13 +8,24 @@ namespace Spider_Patcher
             InitializeComponent();
         }
 
+        // Boolean variable to avoid exiting the tool while patching the files.
+        private bool isBusy = false;
+
+        // Base directory of the Patcher.
+        private static readonly string baseDir = AppContext.BaseDirectory;
+
+        // Path of the "data" folder inside the base directory.
+        private static readonly string dataPath = Path.Combine(baseDir, "data");
+
+        // Path of the "Patch" folder inside the base directory.
+        private static readonly string patchPath = Path.Combine(baseDir, "Patch");
+
         // Show MessageBox when the MainForm is loaded and displayed.
         private async void Main_Shown(object sender, EventArgs e)
         {
-            if (!Directory.Exists(patchPath) || !Directory.EnumerateFileSystemEntries(patchPath).Any())
+            if (!CheckPatchFiles())
             {
-                MessageBox.Show("No patch files found.\n\nClick OK to exit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                Environment.Exit(1);
                 return;
             }
 
@@ -22,7 +33,7 @@ namespace Spider_Patcher
             DialogResult dr = msg;
             if (dr != DialogResult.Yes)
             {
-                Application.Exit();
+                Environment.Exit(1);
                 return;
             }
             await RunPatch();
