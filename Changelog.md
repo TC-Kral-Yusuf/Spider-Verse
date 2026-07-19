@@ -1,3 +1,17 @@
+## Version 3.0.9
+✅ Remastered All Characters <br>
+✅ Updated Raimi Suits (2002 - 2021) <br>
+✅ Added New & Unused Raimi Suits <br>
+✅ Retextured Symbiote Suits (Remastered/Classic) <br>
+✅ Updated Symbiote Emblems <br>
+✅ Updated HUD for various Spidey Suits <br>
+✅ Updated Character Textures <br>
+✅ Corrected HD Fonts Align <br>
+✅ Updated Bulletproof Suit <br>
+✅ Updated MCU Suits <br>
+✅ Added New Suit: Brand New Day (Organic) <br>
+✅ "MCU Red and Blue" updated to "MCU Final Swing"
+
 ## Version 3.0.8
 ✅ Remastered All Characters <br>
 ✅ Remastered Web Texture <br>
