@@ -19,7 +19,7 @@
 
 ## 3️⃣ DOWNLOADS
 🎮 [Flycast Emulator](https://flyinghead.github.io/flycast-builds/) <br>
-🕷️ [Project: Spider-Verse (Full Version)](https://www.mediafire.com/file/eheonpq52uuo9y2/Spider-Verse_v3.0.5.zip/file) <br>
+🕷️ [Project: Spider-Verse (Full Version)](https://www.mediafire.com/file/8qynqquh2n7rgsd/Spider-Verse_v3.0.9.zip/file) <br>
 ✅ [Project: Spider-Verse (Latest Update)](https://github.com/TC-Kral-Yusuf/Spider-Verse/releases/latest)
 
 🌀 [Official Flycast Repository](https://github.com/flyinghead/flycast) <br>
