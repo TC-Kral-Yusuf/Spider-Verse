@@ -1,3 +1,13 @@
+## Version 3.1.0
+✅ Added Dragon Warrior Suits <br>
+✅ Updated Ben Reilly Remastered Suits <br>
+✅ Updated Scarlet Spider (Comic-Accurate) <br>
+✅ Updated Animated Suit 1994 <br>
+✅ Updated X-Men 2024 Suit <br>
+✅ Updated Movie Suits (Recolor) <br>
+✅ Updated EXE Icon <br>
+✅ Optimized Spider-Patcher for v3.1.0 and greater <br>
+
 ## Version 3.0.9
 ✅ Remastered All Characters <br>
 ✅ Updated Raimi Suits (2002 - 2021) <br>
