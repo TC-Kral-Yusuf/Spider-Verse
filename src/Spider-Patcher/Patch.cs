@@ -24,12 +24,32 @@
         {
             string src = Path.Combine(patchPath, "data", category);
             string dst = Path.Combine(dataPath, category);
-            lstOutput.Items.Add($"PATCHING: {category}");
-            if (Directory.Exists(dst) && category != "Costumes")
+
+            if (Directory.Exists(src))
             {
-                Directory.Delete(dst, true);
+                lstOutput.Items.Add($"PATCHING: {category}");
+                if (category == "Costumes")
+                {
+                    foreach (var d in Directory.GetDirectories(src))
+                    {
+                        string costumePath = Path.Combine(dst, Path.GetFileName(d));
+                        if (Directory.Exists(costumePath))
+                        {
+                            Directory.Delete(costumePath, true);
+                        }
+                        await CopyFiles(d, costumePath);
+                    }
+                }
+
+                else
+                {
+                    if (Directory.Exists(dst))
+                    {
+                        Directory.Delete(dst, true);
+                    }
+                    await CopyFiles(src, dst);
+                }
             }
-            await CopyFiles(src, dst);
         }
 
         // This function patches all files by copying/removing the respective mod files.
