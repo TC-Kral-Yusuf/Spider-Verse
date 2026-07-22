@@ -115,7 +115,7 @@ namespace Spider_Verse
 
                     case "03 - Symbiote Spider-Man":
                         fileName = "55d17f89.png";
-                        dirName = Path.Combine("Remastered v1", "spSymbi");
+                        dirName = Path.Combine("Comic-Accurate (Todd McFarlane)", "spSymbi");
                         src = Path.Combine(costumesPath, selectedObj, dirName, fileName);
                         break;
 
