@@ -14,8 +14,8 @@
 
 ## 2️⃣ FEATURES
 ✅ Brand new GUI-based Mod Menu. <br>
-✅ Customize Spider-Man with more than 375 costumes. <br>
-✅ Customize In-Game Characters, Items and much more. <br>
+✅ 400+ Remastered Spider-Man Costumes. <br>
+✅ Remastered Characters, Graphics & UI. <br>
 
 ## 3️⃣ DOWNLOADS
 🎮 [Flycast Emulator](https://flyinghead.github.io/flycast-builds/) <br>
