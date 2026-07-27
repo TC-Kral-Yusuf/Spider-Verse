@@ -1,3 +1,12 @@
+## Version 3.1.1
+✅ Added New Symbiote Enemy Colors <br>
+✅ Recolored Raimi Suits <br>
+✅ Remade "PS1 Insulated Suit" <br>
+✅ Recolored Various Spidey HUDs <br>
+✅ Improved 2099 Suits (Remastered / PS1 / Black Suit / Symbiote) <br>
+✅ Updated Ben Reilly Textures <br>
+✅ Various Texture & Color Corrections <br>
+
 ## Version 3.1.0
 ✅ Added Dragon Warrior Suits <br>
 ✅ Updated Ben Reilly Remastered Suits <br>
