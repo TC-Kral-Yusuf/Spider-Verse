@@ -1,4 +1,5 @@
 ## Version 3.1.1
+✅ "All New Remastered" installs now correctly all remastered Spidey HUDs <br>
 ✅ Added New Symbiote Enemy Colors <br>
 ✅ Recolored Raimi Suits <br>
 ✅ Remade "PS1 Insulated Suit" <br>
